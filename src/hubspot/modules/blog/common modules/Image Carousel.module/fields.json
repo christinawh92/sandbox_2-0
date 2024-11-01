@@ -1,0 +1,78 @@
+[ {
+  "id" : "b48f5724-a585-dba9-87e0-2d3dada0e47e",
+  "name" : "image_item",
+  "display_width" : null,
+  "label" : "Image item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 5,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "23b51276-5767-b366-e3ed-0010343f6f49",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://2660980.fs1.hubspotusercontent-na1.net/hubfs/2660980/MicrosoftTeams-image%20(5).png",
+      "alt" : "MicrosoftTeams-image (5)",
+      "loading" : "lazy",
+      "width" : 735,
+      "height" : 552,
+      "max_width" : 735,
+      "max_height" : 552
+    }
+  }, {
+    "id" : "29a12de8-f314-c6ad-22dd-0fa4a657d89e",
+    "name" : "image_text",
+    "display_width" : null,
+    "label" : "Image text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Caption"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://2660980.fs1.hubspotusercontent-na1.net/hubfs/2660980/MicrosoftTeams-image%20(5).png",
+      "alt" : "MicrosoftTeams-image (5)",
+      "loading" : "lazy",
+      "width" : 735,
+      "height" : 552,
+      "max_width" : 735,
+      "max_height" : 552
+    },
+    "image_text" : "Caption"
+  } ]
+}, {
+  "id" : "23efb3d8-4399-e8be-2fc5-c428e8527c25",
+  "name" : "aspect_ratio",
+  "display_width" : null,
+  "label" : "Aspect ratio",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "16 / 9", "16:9" ], [ "4 / 3", "4:3" ], [ "1 / 1", "1:1" ], [ "21 / 9", "21:9" ], [ "3 / 2", "3:2" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "16 / 9"
+} ]

@@ -1,0 +1,117 @@
+<!--
+    templateType: blog_listing
+    isAvailableForNewContent: true
+    label: Customer Boilerplate - listing fullwidth
+-->
+
+
+{% extends '../layouts/base_blog.html' %}
+
+{% block body %}
+<div class="blog-fullwidth margin-bottom-toggle">
+    <div class="container pt-5">
+    
+    {% module "module_17055893925597" path="/Customer Boilerplate/modules/blog/fullwidth modules/Hero blog fullwidth", label="Hero blog fullwidth" %}
+
+    {% if blog_author %}
+        <div class="hs-author-profile mb-5 d-flex gap-4 border-bottom pb-4">
+            {% if blog_author.avatar %} 
+            <div class="author-avatar"> 
+                    <img src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}'s photo"> 
+            </div> 
+            {% endif %} 
+
+            <div class="">
+                <h3 class="hs-author-name">{{ blog_author.display_name }}</h3>
+                <div class="hs-author-bio">{{ blog_author.bio }}</div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if tag %}
+        <h1 class="h2 mb-5 text-center">Kategori: {{ page_meta.html_title|split(' | ')|last }}</h1>
+    {% endif %}
+
+    {% if simple_list_page %}
+        <h1 class="h2 mb-5 text-center">Alle innlegg</h1>
+    {% endif %}
+    
+    {% module "module_17057812132034" path="/Customer Boilerplate/modules/blog/fullwidth modules/Tags", label="Tags" %}
+
+
+        <div class="blog-listing-wrapper">
+            <div class="blog-section">
+                    {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+                    <div class="post-listing-fullwidth {% if simple_list_page %}post-listing-fullwidth-simple{% endif %} d-grid gap-4">
+
+                        {% for content in contents %}
+                        <div class="post-item w-100 d-flex flex-column position-relative bg-light border-radius">
+                            <div class="post-header clearfix">
+                                {% if content.post_list_summary_featured_image %}
+                                <div class="featured-image-wrapper">
+                                    <a href="{{content.absolute_url}}" title="" class="featured-image-link">
+                                        <img src="{{ content.post_list_summary_featured_image }}" class="featured-image border-radius-top w-100"
+                                            alt="{{ content.featured_image_alt_text | escape }}" loading="lazy">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <!--post content-->
+                            <div class="post-body px-4 pt-3 pb-5">
+                                <div class="d-flex flex-column gap-2 pb-3">
+
+                                    {% set tag_array = [] %}
+                                    {% for tag in content.tag_list %}
+                                    {% do tag_array.append( tag.slug ) %}
+                                    {% endfor %}
+
+                                    {% if not simple_list_page %}
+                                    <div class="tag-icon"><a class="text-decoration-none"
+                                            href="{{ group.absolute_url }}/tag/{{ tag_array[0] }}">{{ tag_array[0]|capitalize }}</a></div>
+
+                                    <p id="hubspot-author_data" class="blog-post-info mb-0"
+                                        data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                                        {% if content.blog_post_author %}
+                                        {{ content.publish_date_localized }}
+                                        <span class="hs-author-label"> av </span><a class="author-link text-dark"
+                                            href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{
+                                            content.blog_post_author.display_name }}</a>
+                                        {% endif %}
+                                    </p>
+                                    {% endif %}
+
+                                    <h2 class="h3"><a class="text-dark text-decoration-none" href="{{content.absolute_url}}">{{ content.name }}</a></h2>
+                                    
+                                    {% if not simple_list_page %}
+                                    <a href="{{content.absolute_url}}" class="text-dark text-decoration-none"><p>{{ content.post_list_content|striptags|truncate(250, breakword=False, end='...')}}</p></a>
+                                    {% endif %}
+                                </div>
+                                <a href="{{content.absolute_url}}" class="position-absolute bottom-0 mb-4 btn btn-primary button-border-radius">Les mer</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+
+                {% if not simple_list_page %}
+                <div class="blog-pagination d-flex flex-row justify-content-center gap-4 mt-4">
+                    {% if last_page_num %}
+                    <a class="previous-posts-link" href="{{ blog_page_link(last_page_num) }}">Forrige</a>
+                    {% endif %}
+                    <a class="all-posts-link" href="{{ blog_all_posts_url(group.id) }}">Alle artikler</a>
+                    {% if next_page_num %}
+                    <a class="next-posts-link" href="{{ blog_page_link(next_page_num) }}">Neste</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <div class="border-radius">
+                        {% module "module_17059299865826" path="/Customer Boilerplate/modules/blog/fullwidth modules/Subscribe to blog", label="Subscribe to blog" %}
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

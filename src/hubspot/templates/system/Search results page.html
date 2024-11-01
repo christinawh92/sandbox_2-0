@@ -1,0 +1,17 @@
+<!--
+    templateType: search_results_page
+    isAvailableForNewContent: true
+    label: Søkeresultatside
+-->
+
+{% extends "../layouts/base_system.html" %}
+
+{% block body %}
+
+<div class="search-page margin-top-section margin-bottom-section">
+  <div class="container">
+    <div class="search-input-wrapper">{% module "module_170600419491127" path="/Customer Boilerplate/templates/system/modules/Search input", label="Search input" %}</div>
+    {% module "module_170600421359529" path="/Customer Boilerplate/templates/system/modules/Search results", label="Search results" %}
+  </div>
+</div>
+{% endblock body %}

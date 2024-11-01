@@ -1,0 +1,43 @@
+<div class="related-posts-wrapper py-5 border-top">
+  <script>
+    var hasRelatedPosts = false; // JavaScript flag
+  </script>
+
+  {% set max_posts = 3 %}
+  {% set rec_posts = blog_recent_topic_posts(group.id, content.topic_list[0].slug, max_posts + 1) %}
+  {% set i = 0 %}
+
+  <div id="related-posts-header"></div>
+
+  <div class="related-posts d-grid grid-column-3 gap-3">
+    {% for post in rec_posts %}
+      {% if content.absolute_url != post.absolute_url and i < max_posts %}
+        <script>hasRelatedPosts = true;</script> <!-- Set the flag -->
+
+        <div class="related-post-item bg-light position-relative border-radius">
+          {% if post.featured_image %}
+            <div class="related-image">
+              <a href="{{ post.absolute_url }}">
+                <img src="{{ post.featured_image }}" alt="{{ post.name }}" class="w-100 object-fit-cover border-radius-top" style="aspect-ratio: 16/9;">
+              </a>
+            </div>
+          {% endif %}
+          <div class="content p-4">
+            <a href="{{ post.absolute_url }}" class="text-dark related-title text-decoration-none">
+              <h3 class="h4 pb-5">{{ post.name }}</h3>
+            </a>
+            <a class="btn btn-primary mt-2 mb-4 position-absolute bottom-0" href="{{ post.absolute_url }}">Les mer</a>
+          </div>
+        </div>
+        {% set i = i + 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <script>
+    if (hasRelatedPosts) {
+      var headerHtml = '<h4 class="b-4">Relaterte innlegg</h4>';
+      document.getElementById('related-posts-header').innerHTML = headerHtml;
+    }
+  </script>
+</div>

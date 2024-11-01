@@ -1,0 +1,22 @@
+<div class="program-cards {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}">
+  <div class="container mb-4 pb-2 {{ module.text_color }}">
+    <h2 class="h5 text-center">{{ module.subheading }}</h2>
+    <h2 class="h2 text-center">{{ module.heading }}</h2>
+  </div>
+  <div class="container d-flex gap-4 flex-column align-items-stretch">
+    {% for item in module.card %}
+      <div class="row m-0 card-content w-100 border-radius px-4 px-xl-5 py-5 d-flex align-items-center gap-3" style="background-color: {{ module.background_color.color }}">
+      <div class="col-sm-12 col-md-12 col-lg-3 d-flex flex-column align-items-lg-center gap-2 align-items-sm-start">
+      <i class="display-6 bi bi-clock"></i>
+      <div class="timestamp">{{ item.time }}</div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-8">
+        <h4 class="h5">{{ item.heading_1 }}</h4>
+        <span>{{ item.summary }}</span>
+        </div>
+      </div>  
+    {% endfor %}
+  </div>
+</div>

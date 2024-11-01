@@ -1,0 +1,72 @@
+[ {
+  "id" : "1a40b0fe-4391-1b55-abae-71a04eb754e6",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Vil du motta epost om nye innlegg?"
+}, {
+  "id" : "49217c99-46d7-61e5-6de3-ae5add8f3a1b",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null
+  }
+}, {
+  "id" : "7fb19056-ec80-3b2c-35c9-f638695d56ff",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ee173a07-01a6-3492-431c-5b6440ef6abb",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "7d47aba9-03cb-c733-39a2-138fc13f3e68",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "78f9815d-bda4-990e-fb25-9945d13ec255",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : true,
+    "margin_bottom" : true,
+    "padding" : true
+  }
+} ]

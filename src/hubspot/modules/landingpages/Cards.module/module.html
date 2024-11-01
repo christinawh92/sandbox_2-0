@@ -1,0 +1,21 @@
+<div class="cards {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}">
+  <div class="container mb-4 pb-2">
+    <h2 class="h4 text-center">{{ module.subheading }}</h2>
+    <h2 class="h2 text-center">{{ module.heading }}</h2>
+  </div>
+  <div class="container d-grid cards-items gap-4 grid-column-{{ module.columns }}">
+    {% for item in module.card %}
+      <div class="card-content border-radius text-center px-4 px-xl-5 py-5 d-flex flex-column" style="background-color: {{ module.background_color.color }}">
+        <h3 class="h4">{{ item.heading_1 }}</h3>
+        <span>{{ item.summary }}</span>
+        {% set href = item.button_link.href %}
+        {% if item.button_link.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        {% if item.button_ == 'true' %}<a type="button" href="{{ href }}" class="btn btn-primary mx-auto mt-3">{{ item.button_text }}</a>{% endif %}  
+      </div>  
+    {% endfor %}
+  </div>
+</div>

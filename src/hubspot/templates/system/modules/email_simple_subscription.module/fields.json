@@ -1,0 +1,121 @@
+[ {
+  "id" : "55f058f2-ee78-2624-cd8b-562e2aa392ba",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Meld deg av e-poster"
+}, {
+  "id" : "subheader",
+  "name" : "subheader",
+  "display_width" : null,
+  "label" : "Subheading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+}, {
+  "id" : "error_info_text",
+  "name" : "error_info_text",
+  "display_width" : null,
+  "label" : "Error message",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : null,
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : {
+      "operator" : "HAS_ALL",
+      "scopes" : [ ],
+      "gates" : [ "subscriptions:new-link-generation" ]
+    }
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Det oppsto et problem med å laste siden. Prøv å bruke den samme lenken fra en nyere e-post, eller kontakt oss for å oppdatere."
+}, {
+  "id" : "33717e20-8dfa-1c1b-3a99-b97cc6490237",
+  "name" : "input_help_text",
+  "display_width" : null,
+  "label" : "Email input help text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : null,
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : {
+      "operator" : "HAS_NONE",
+      "scopes" : [ ],
+      "gates" : [ "subscriptions:new-link-generation" ]
+    }
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Din e-postadresse:"
+}, {
+  "id" : "b0b9fefc-8a0f-5bfb-b39c-355b31e0d99f",
+  "name" : "input_placeholder",
+  "display_width" : null,
+  "label" : "Email input placeholder text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : null,
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : {
+      "operator" : "HAS_NONE",
+      "scopes" : [ ],
+      "gates" : [ "subscriptions:new-link-generation" ]
+    }
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "email@example.com"
+}, {
+  "id" : "000eda6e-1e7f-c072-e329-8028e4c9c23a",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : null,
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : {
+      "operator" : "HAS_NONE",
+      "scopes" : [ ],
+      "gates" : [ "subscriptions:new-link-generation" ]
+    }
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Meld av alle e-poster"
+} ]

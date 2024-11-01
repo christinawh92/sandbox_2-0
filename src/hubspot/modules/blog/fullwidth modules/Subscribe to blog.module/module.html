@@ -1,0 +1,15 @@
+<div class="subscribe-to-blog form-wrapper border-radius {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}" id="abonner subscribe">
+  <div class="container">
+    <h2 class="">{{ module.heading }}</h2>
+    {% form
+      form_to_use="{{ module.form_field.form_id }}"
+      response_response_type="{{ module.form_field.response_type }}"
+      response_message="{{ module.form_field.message }}"
+      response_redirect_id="{{ module.form_field.redirect_id }}"
+      response_redirect_url="{{module.form_field.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+    %}
+  </div>
+</div>

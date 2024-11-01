@@ -1,0 +1,8 @@
+<div class="tags d-flex flex-column gap-2">
+<h3>{{ module.heading }}</h3>
+  {% for item in module.tags %}
+    <div class="tag-item">
+      <a class="btn btn-outline-primary" href="/topic/{{ item.tag_field.slug }}">{{ item.tag_field.name }}</a>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+<!--
+  templateType: email_subscriptions_confirmation_page
+  isAvailableForNewContent: true
+  label: Customer Boilerplate - email subscriptions confirmation
+  screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_system.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Confirm subscriptions" %}
+
+{% block body %}
+<section class="content-wrapper py-5">
+  <div class="systems-page container py-5 d-flex justify-content-center align-items-center flex-column text-center">
+  {% module "module_17057859287539" path="/Customer Boilerplate/templates/system/modules/email_subscriptions_confirmation", label="email_subscriptions_confirmation" %}  </div>
+</section>
+{% endblock body %}

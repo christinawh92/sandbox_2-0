@@ -1,0 +1,51 @@
+[ {
+  "id" : "6a6e5d44-1c07-86cf-df78-db9d5bf8f254",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Kategorier"
+}, {
+  "id" : "027a54aa-3fce-bf67-48ae-16e2516c1bf3",
+  "name" : "tags",
+  "display_width" : null,
+  "label" : "Tags",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : "6c8b26c9-97ed-5b80-f981-377eefd47c99",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "6c8b26c9-97ed-5b80-f981-377eefd47c99",
+    "name" : "tag_field",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "tag_value" : "ALL",
+    "type" : "tag",
+    "default" : {
+      "id" : 4431048494,
+      "name" : "Insider",
+      "slug" : "insider"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "tag_field" : {
+      "id" : 4431048494,
+      "name" : "Insider",
+      "slug" : "insider"
+    }
+  } ]
+} ]

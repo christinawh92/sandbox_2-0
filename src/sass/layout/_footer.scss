@@ -1,0 +1,16 @@
+footer { 
+    background-color: $light;
+ 
+    .multi-content-picker a, .social-media a {
+       text-decoration: none; 
+       color: $body-color;
+    } 
+ 
+    .social-icon {
+       width: 17px;
+       height: 17px;
+       margin-right: 10px;
+       opacity: .5;
+       margin-top: -4px;
+    }
+ }

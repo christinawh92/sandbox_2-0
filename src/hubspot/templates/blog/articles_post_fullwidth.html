@@ -1,0 +1,98 @@
+<!--
+    templateType: blog_post
+    isAvailableForNewContent: true
+    label: Customer Boilerplate - post page fullwidth
+-->
+
+{% extends '../layouts/base_blog.html' %}
+
+{% block body %}
+
+<div class="blog-fullwidth margin-bottom-toggle">
+    <div class="container-smaller pt-5">
+        <div class="blog-post-wrapper">
+
+            <div class="blog-section">
+                <div class="post-section">
+                    <div class="post-header">
+
+                        <h1>{{ content.name }}</h1>
+                        <p id="hubspot-author_data" class="blog-post-info" data-hubspot-form-id="author_data"
+                            data-hubspot-name="Blog Author">
+                            <span class="hs-author-label"> Av</span>
+                            {% if content.blog_post_author %}
+                            <a class="author-link"
+                                href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{
+                                content.blog_post_author.display_name }}</a> | {{ content.publish_date_localized }}
+                            {% endif %}
+                        </p>
+
+                        <div class="social-shares-post d-flex gap-3 mb-4">
+                            <a class="btn btn-sm btn-outline-light d-flex align-items-center gap-2" target="_blank"
+                                href="https://www.facebook.com/sharer/sharer.php?u={{ content.absolute_url|urlencode }}"><img
+                                    src="https://respons.markedspartner.no/hubfs/Templates/facebook-1.svg">Del</a>
+                            <a class="btn btn-sm btn-outline-light d-flex align-items-center gap-2" target="_blank"
+                                href="https://www.linkedin.com/shareArticle?mini=true&url={{content.absolute_url|urlencode}}"><img
+                                    src="https://respons.markedspartner.no/hubfs/Templates/linkedin%20(1).svg">Del</a>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="{{ content.post_list_summary_featured_image }}" width="700" height="394" loading="lazy"
+                    class="featured-image border-radius" alt="{{ content.featured_image_alt_text | escape }}"> 
+                    {% module "module_17055852945462" path="/Customer Boilerplate/modules/blog/common modules/Caption", label="Caption" %}
+
+                <div class="post-body my-4">
+                    {{ content.post_body }}
+                </div>
+
+                
+                <div class="blog-post-info">
+                    
+                    {% if content.topic_list %}
+                        <div class="border-top py-5">
+                        <h4>Temaer</h4>
+                        <p id="hubspot-topic_data">
+                            {% for topic in content.topic_list %}
+                            <a class="topic-link btn btn-outline-primary"
+                                href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name
+                                }}</a>{% if not loop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                    </div>
+                {% endif %}
+
+                    
+                    <div class="about-author d-flex gap-4 py-5 border-top flex-column flex-sm-row">
+                        {% if content.blog_post_author.avatar %}
+                        <div class="author-avatar">
+                            <img src="{{ content.blog_post_author.avatar }}"
+                                alt="{{ content.blog_post_author.display_name }}'s photo">
+                        </div>
+                        {% endif %}
+
+                        <div class="author-content">
+                            <p class="author-title">Av: <a
+                                    href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{
+                                    content.blog_post_author.display_name }}</a></p>
+
+                            {% if content.blog_post_author.bio %}
+                            <p class="author-bio">{{content.blog_post_author.bio}}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                {# Related articles #}
+                {% module "module_17072097841003" path="/Customer Boilerplate/modules/blog/common modules/Related posts", label="Related posts" %}
+
+
+            </div>
+        </div>
+        <div class="border-radius">
+            {% module "module_17059299865826" path="/Customer Boilerplate/modules/blog/fullwidth modules/Subscribe to blog", label="Subscribe to blog" %}
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

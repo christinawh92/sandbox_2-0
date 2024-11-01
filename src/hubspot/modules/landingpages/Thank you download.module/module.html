@@ -1,0 +1,17 @@
+<div class="thank-you {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}">
+  <div class="container">
+    <div class="icon-wrapper mb-3 d-block text-center">
+      {% if module.icon %}
+        <i class="text-primary display-5 {{ module.icon }}"></i>
+      {% endif %}
+    </div>
+    <h1 class="h2 mb-4 text-center">{{ module.heading }}</h1>
+    <div class="d-flex gap-4 mb-4 flex-row justify-content-center">
+        {% cta guid="{{ module.download_cta }}" %}
+        {% cta guid="{{ module.download_cta_copy }}" %}
+    </div>
+    <div class="text-center">{{ module.richtext_field }}</div>
+  </div>
+</div>

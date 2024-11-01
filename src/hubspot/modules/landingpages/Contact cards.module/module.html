@@ -1,0 +1,22 @@
+<div class="contact-cards {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}">
+  <div class="container mb-4 pb-2 {{ module.text_color }}">
+    <h2 class="h5 text-center">{{ module.subheading }}</h2>
+    <h2 class="h2 text-center">{{ module.heading }}</h2>
+  </div>
+  <div class="contact-grid container d-grid gap-4 grid-column-{{ module.columns }}">
+    {% for item in module.card %}
+      <div class="border-radius text-center px-4 py-4 d-flex flex-column gap-3" style="background-color: {{ module.background_color.color }}">
+      {% if item.image_field.src %}
+        <div class="card-image" style="aspect-ratio: 1/1;">
+        <img src="{{ item.image_field.src }}" class="w-100 h-100 border-radius" style="object-fit: cover;" alt="{{ item.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+      {% endif %}
+        <h3 class="h4 m-0 {{ item.text_color }}">{{ item.name_1 }}</h3>
+        <span class="{{ item.text_color }}">{{ item.summary }}</span>
+        <span class="{{ item.text_color }}">{{ item.richtext_field }}</span>
+      </div>  
+    {% endfor %}
+  </div>
+</div>

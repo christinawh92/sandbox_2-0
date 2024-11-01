@@ -1,0 +1,60 @@
+[ {
+  "id" : "781adfca-1db2-9cbf-0c2c-0347d98f5125",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "d9197c3c-6f47-d44d-27b7-b89c54017328",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Button text"
+}, {
+  "id" : "43b48796-ba95-7679-07f7-58952c8a032b",
+  "name" : "button_style",
+  "display_width" : null,
+  "label" : "Button style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "btn-primary", "Primary" ], [ "btn-secondary", "Secondary" ], [ "btn-outline-primary", "Primary outline" ], [ "btn-outline-secondary", "Secondary outline" ], [ "btn-link", "Link" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "btn-primary"
+}, {
+  "id" : "85bd9b86-7a4a-40ae-95c4-6193a005502b",
+  "name" : "align",
+  "display_width" : null,
+  "label" : "Align",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "justify-content-start", "Left" ], [ "justify-content-center", "Center" ], [ "justify-content-end", "Right" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "justify-content-center"
+} ]

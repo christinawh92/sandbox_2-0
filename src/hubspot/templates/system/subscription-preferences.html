@@ -1,0 +1,17 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Customer Boilerplate - email subscription preferences
+  screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_system.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Subscription preferences" %}
+
+{% block body %}
+<section class="content-wrapper py-5">
+  <div class="systems-page container py-5">
+  {% module "module_17057859021197" path="/Customer Boilerplate/templates/system/modules/email_subscriptions", label="email_subscriptions" %}  </div>
+</section>
+{% endblock body %}

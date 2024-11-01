@@ -1,0 +1,68 @@
+[ {
+  "id" : "9e2850f6-8273-18fb-22ba-ccb98f1707b0",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://2660980.fs1.hubspotusercontent-na1.net/hubfs/2660980/Customer%20boilerplate/Light-abstract.jpg",
+    "alt" : "A group of white circles sitting next to each other",
+    "loading" : "lazy",
+    "width" : 1920,
+    "height" : 1280,
+    "max_width" : 1920,
+    "max_height" : 1280
+  }
+}, {
+  "id" : "64a21e53-cf34-8ec6-d463-39b09d49c4b4",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9bb9567d-5a48-0a9c-5eb9-ea36267d3b06",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "bc686eed-4f9d-f4cb-5be2-dcebefa25ef9",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "17037c9c-1ef4-d768-15fc-45ee55ccad0f",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : false,
+    "margin_bottom" : false,
+    "padding" : false
+  }
+} ]

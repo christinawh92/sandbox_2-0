@@ -1,0 +1,55 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Landing Page - Event
+    screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_lp.html" %}
+
+{% block body %}
+
+  {% dnd_area 'dnd_area'
+    label='Main section',
+    class=''
+  %}
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Hero" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Rich text" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Contact Cards" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Program Cards" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Rich text" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  
+{% end_dnd_area %}
+
+{% endblock body %}

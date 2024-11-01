@@ -1,0 +1,21 @@
+{
+  "name": "sandbox_2-0",
+  "version": "1.0.0",
+  "description": "Christinas sandbox in HubSpot",
+  "main": "index.js",
+  "scripts": {
+    "watch-css": "sass src/sass/main.scss src/hubspot/css/main.css -s compressed --watch",
+    "watch-hs": "hs watch src/hubspot \"Christinas Sandbox\"",
+    "upload-modules": "hs upload src/hubspot/modules \"Christinas Sandbox/modules\" ",
+    "upload-templates": "hs upload src/hubspot/templates \"Christinas Sandbox/templates\" ",
+    "upload-all": "hs upload src/hubspot \"Christinas Sandbox\" ",
+    "fetch": "hs fetch \"Christinas Sandbox\" src/hubspot",
+    "fetch-modules-overwrite": "hs fetch --overwrite \"Christinas Sandbox/modules\" src/hubspot/modules"
+  },
+  "author": "Christina Weberg Haukebø",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}

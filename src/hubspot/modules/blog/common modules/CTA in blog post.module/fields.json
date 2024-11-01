@@ -1,0 +1,21 @@
+[ {
+  "id" : "7d954b16-8356-a039-aee0-2a3ce5a068ab",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d662c1d6-9c91-f672-05fd-9019dcefa481",
+  "name" : "cta_field",
+  "display_width" : null,
+  "label" : "CTA",
+  "inline_help_text" : "Must be a cta without styling (No style)",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta"
+} ]

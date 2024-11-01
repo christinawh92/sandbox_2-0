@@ -1,0 +1,30 @@
+<!--
+  templateType: global_partial
+  label: Header Blog
+-->
+
+<header class="bg-light py-4">
+  <div class="container d-flex justify-content-between">
+    <a href="{{ group.absolute_url }}"><img src="https://respons.markedspartner.no/hubfs/Customer%20Boilerplate/Blogglogo.svg" alt="logo" width="200px" loading="lazy"></a>
+    <div class="header-content d-flex gap-3 align-items-center">
+      <div class="search-input-wrapper">{% module "module_170600419491127" path="/Customer Boilerplate/templates/system/modules/Search input collapse", label="Search input collapse" %}</div>
+      {# <a class="btn btn-primary button-border-radius" href="#abonner">Abonner</a> #}
+    </div>
+
+    {# Language Switcher - Remove if not used #}
+    <div class="header__row-1">
+    {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
+      <div class="header__language-switcher header--element">
+        <div class="header__language-switcher--label">
+        {% module "module_17127487704213" 
+        path="/Customer Boilerplate/templates/system/modules/language_switcher", 
+        label="language_switcher" %}
+          <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  {# End Language Switcher #}
+
+  </div>
+</header>

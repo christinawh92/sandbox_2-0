@@ -1,0 +1,98 @@
+[ {
+  "id" : "a201ffb9-4010-a865-36c3-1f7a25d7f8c0",
+  "name" : "icon",
+  "display_width" : null,
+  "label" : "Icon",
+  "inline_help_text" : "Find icon here: https://icons.getbootstrap.com/",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "bi bi-download"
+}, {
+  "id" : "30e93a86-b8fc-864d-6f4e-9549ae2b16fe",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is a heading"
+}, {
+  "id" : "e94c6865-9a62-1d03-0e17-6a4dceb8d447",
+  "name" : "download_cta",
+  "display_width" : null,
+  "label" : "Download CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "7578feb4-8fbe-4bfb-a415-9abc9b628eb4"
+}, {
+  "id" : "153d1141-9a04-eabe-5f0a-ebc568a39807",
+  "name" : "download_cta_copy",
+  "display_width" : null,
+  "label" : "Download CTA copy",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "056b4837-46be-42c7-97d8-5c47cdd104a8"
+}, {
+  "id" : "b1269b50-9916-430b-4452-604cee2f2af0",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "448fbbec-d71e-0d1e-ddba-6361b6e6cfbd",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d6076ba0-c701-0107-f23f-2b2d06c98b35",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "ebb7ed33-7997-8207-0d9b-315d527953c3",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "b9d4a007-0a64-6584-3874-c0de5f5ab4f4",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : false,
+    "margin_bottom" : true,
+    "padding" : false
+  }
+} ]

@@ -1,0 +1,25 @@
+@import "variables"; // variabler må ligge øverst så primary, secondary osv skal overstyre verdier i bootstrap
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+@import "layout/footer";
+@import "layout/header-simple";
+@import "layout/layout";
+@import "layout/typography";
+@import "layout/system";
+@import "layout/blog_sidebar";
+@import "layout/blog_fullwidth";
+@import "layout/forms";
+
+@import "mixins/mixins";
+
+// BLOG
+@import "modules/blog/subscribe-to-blog"; 
+@import "modules/blog/image-carousel"; 
+
+// LANDINGPAGES
+@import "modules/landingpages/hero"; 
+@import "modules/landingpages/download-center"; 
+
+

@@ -1,0 +1,25 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Customer Boilerplate - 404 error
+  screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_system.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Error 404 | Siden er ikke funnet" %}
+
+{% block body %}
+<section class="content-wrapper text-center">
+  <div class="error-page container py-5" data-error="404">
+    {% module 'content'
+      path='@hubspot/rich_text',
+      html='<h1 class="pt-5">Siden er ikke funnet...</h1>
+      <p><strong>Error 404</strong></p>
+      <p>Beklager, vi kunne ikke finne siden</p>
+      <a href="https://www.kundenavn.no/" class="btn btn-primary mb-5">Gå til kundenavn.no</a>
+      '
+    %}
+  </div>
+</section>
+{% endblock body %}

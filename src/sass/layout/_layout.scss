@@ -1,0 +1,94 @@
+@import "../variables";
+@import "../layout/typography";
+@import '../mixins/mixins';
+
+body {
+    font-family: $font-family !important; 
+    font-weight: 400;
+    line-height: 1.8em;
+
+    .container-fluid {
+        padding: 0;
+    }
+}
+
+// Container
+
+.container-smaller {
+    width: $container-smaller;
+    margin: 0 auto;
+}
+
+// Padding and margin
+
+.padding-section {
+    padding: $padding-section;
+} 
+
+.margin-top-section {
+    margin-top: $margin-section;
+}
+
+.margin-bottom-section {
+    margin-bottom: $margin-section;
+}
+
+// Button
+
+.btn {
+    width: fit-content;
+}
+
+a.cta_button, .hs-button {
+    @extend .btn; 
+    @extend .btn-primary; 
+}
+
+
+// Border radius
+
+.border-radius {
+    border-radius: $border-radius;
+}
+
+.border-radius-top {
+    border-radius: $border-radius-top;
+}
+
+.button-border-radius, .hs-button {
+    border-radius: $button-border-radius; 
+}
+
+// Grid
+
+.grid-column-2 {
+    grid-template-columns: repeat(2,1fr);
+    
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.grid-column-3 {
+    grid-template-columns: repeat(3,1fr);
+
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.grid-column-4 {
+    grid-template-columns: repeat(4,1fr);
+
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -1,0 +1,238 @@
+[ {
+  "id" : "5ab00e6c-27de-fd5c-22bf-c9c43159c359",
+  "name" : "subheading",
+  "display_width" : null,
+  "label" : "Subheading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is a subheading"
+}, {
+  "id" : "41e47e8c-dc41-ac11-13ac-88d81126e09d",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is a heading"
+}, {
+  "id" : "5040138d-a128-ec78-f9c3-b6c0c5568f17",
+  "name" : "text_color",
+  "display_width" : null,
+  "label" : "Text Color",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "text-white", "White" ], [ "text-dark", "Dark" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "text-dark"
+}, {
+  "id" : "7bef6400-582b-0a15-f503-6d1d977879eb",
+  "name" : "columns",
+  "display_width" : null,
+  "label" : "Columns",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "2", "2" ], [ "3", "3" ], [ "4", "4" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "3"
+}, {
+  "id" : "ee96fd9e-3462-2fde-dc6b-b24429fcae01",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background color on cards",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#f2f2f2",
+    "opacity" : 100
+  }
+}, {
+  "id" : "32f76815-c6e7-61a8-4cf2-da6106048ad5",
+  "name" : "card",
+  "display_width" : null,
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : null,
+    "sorting_label_field" : "edaf8348-02d0-cc0e-2bf0-8890af2746c7",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "a879c216-5845-a188-aacd-87e2af60035f",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://respons.markedspartner.no/hubfs/contact-person%20placeholder.png",
+      "alt" : "contact-person placeholder",
+      "loading" : "lazy",
+      "width" : 1460,
+      "height" : 1459,
+      "max_width" : 1460,
+      "max_height" : 1459
+    }
+  }, {
+    "id" : "8d1f275d-00ad-417a-06e0-0c06cf7fa300",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "text-white", "White" ], [ "text-dark", "Dark" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "text-dark"
+  }, {
+    "id" : "edaf8348-02d0-cc0e-2bf0-8890af2746c7",
+    "name" : "name_1",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Name"
+  }, {
+    "id" : "5cf19bb7-e65e-bc60-1f51-90d832fe8d44",
+    "name" : "summary",
+    "display_width" : null,
+    "label" : "Summary",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Job title"
+  }, {
+    "id" : "de4c7c8d-a852-743a-80c1-4dae3613a9dc",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://respons.markedspartner.no/hubfs/contact-person%20placeholder.png",
+      "alt" : "contact-person placeholder",
+      "loading" : "lazy",
+      "width" : 1460,
+      "height" : 1459,
+      "max_width" : 1460,
+      "max_height" : 1459
+    },
+    "text_color" : "text-dark",
+    "name_1" : "Name",
+    "summary" : "Job title"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://respons.markedspartner.no/hubfs/contact-person%20placeholder.png",
+      "alt" : "contact-person placeholder",
+      "loading" : "lazy",
+      "width" : 1460,
+      "height" : 1459,
+      "max_width" : 1460,
+      "max_height" : 1459
+    },
+    "text_color" : "text-dark",
+    "name_1" : "Name",
+    "summary" : "Job title"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://respons.markedspartner.no/hubfs/contact-person%20placeholder.png",
+      "alt" : "contact-person placeholder",
+      "loading" : "lazy",
+      "width" : 1460,
+      "height" : 1459,
+      "max_width" : 1460,
+      "max_height" : 1459
+    },
+    "text_color" : "text-dark",
+    "name_1" : "Name",
+    "summary" : "Job title"
+  } ]
+}, {
+  "id" : "b8edcc01-c9ae-104c-3a4c-55a8350df06e",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "db32bf60-1d60-93a2-b14e-9b5b04120170",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "057ee571-bdf6-6d73-58f0-c02c88ea4378",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "70588ee5-8972-16f7-4690-b5f9a65f1e4a",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : true,
+    "margin_bottom" : false,
+    "padding" : false
+  }
+} ]

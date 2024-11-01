@@ -1,0 +1,27 @@
+.download-center {
+    .container {
+        gap: 3rem;
+    }
+
+    .col.image-wrapper {
+        max-width: 35%; 
+
+        @media (max-width: map-get($grid-breakpoints, md)) {
+            max-width: 100%; 
+            margin-bottom: 30px;
+        }
+
+        &.smaller-img {
+            max-width: 25%;
+
+            @media (max-width: map-get($grid-breakpoints, md)) {
+                max-width: 100%; 
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .category {
+        color: $brand-color-01;
+    }
+}

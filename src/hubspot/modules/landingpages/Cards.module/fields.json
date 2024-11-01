@@ -1,0 +1,209 @@
+[ {
+  "id" : "5ab00e6c-27de-fd5c-22bf-c9c43159c359",
+  "name" : "subheading",
+  "display_width" : null,
+  "label" : "Subheading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is a small heading"
+}, {
+  "id" : "41e47e8c-dc41-ac11-13ac-88d81126e09d",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "This is a heading"
+}, {
+  "id" : "72e93c1c-07e3-bb14-175b-d0dd816af37c",
+  "name" : "columns",
+  "display_width" : null,
+  "label" : "Columns",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "2", "2" ], [ "3", "3" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "2"
+}, {
+  "id" : "77eb1d61-fc16-59f1-7e84-2f200ec24883",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background color on cards",
+  "inline_help_text" : "Choose a light color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#f2f2f2",
+    "opacity" : 100
+  }
+}, {
+  "id" : "32f76815-c6e7-61a8-4cf2-da6106048ad5",
+  "name" : "card",
+  "display_width" : null,
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 9,
+    "sorting_label_field" : "edaf8348-02d0-cc0e-2bf0-8890af2746c7",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "edaf8348-02d0-cc0e-2bf0-8890af2746c7",
+    "name" : "heading_1",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Heading"
+  }, {
+    "id" : "47c7f7f2-3458-520a-1c37-b7cadf3ab08d",
+    "name" : "summary",
+    "display_width" : null,
+    "label" : "Summary",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis pellentesque lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</span>"
+  }, {
+    "id" : "3efa5e82-8258-9d1a-71a8-3925dd32a0a7",
+    "name" : "button_",
+    "display_width" : null,
+    "label" : "Button?",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "b895b484-9918-2a12-e430-effdace6181e",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "card.button_",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Button text"
+  }, {
+    "id" : "523fe69c-1338-0be2-9517-3a6d7f0c9f15",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "card.button_",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "type" : "url",
+    "default" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "heading_1" : "Heading",
+    "summary" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis pellentesque lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</span>",
+    "button_" : true,
+    "button_text" : "Button text",
+    "button_link" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    }
+  }, {
+    "heading_1" : "Heading",
+    "summary" : "<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis pellentesque lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</span>",
+    "button_" : true,
+    "button_text" : "Button text",
+    "button_link" : {
+      "content_id" : null,
+      "href" : "",
+      "type" : "CONTENT"
+    }
+  } ]
+}, {
+  "id" : "b8edcc01-c9ae-104c-3a4c-55a8350df06e",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "db32bf60-1d60-93a2-b14e-9b5b04120170",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "057ee571-bdf6-6d73-58f0-c02c88ea4378",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "70588ee5-8972-16f7-4690-b5f9a65f1e4a",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : true,
+    "margin_bottom" : false,
+    "padding" : false
+  }
+} ]

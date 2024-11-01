@@ -1,0 +1,29 @@
+<div class="download-center {% if module.margin_and_padding.padding %}padding-section{% endif %}
+{% if module.margin_and_padding.margin_top %}margin-top-section{% endif %}
+{% if module.margin_and_padding.margin_bottom %}margin-bottom-section{% endif %}">
+  <div class="container d-md-flex align-items-center"> 
+    <div class="col image-wrapper {{ module.image_size }}">
+      {% if module.image_field.src %}
+        <img class="w-100 border-radius" src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+    </div>
+    
+    <div class="col d-flex flex-column">
+      <div class="category mb-3">{{ module.category }}</div>
+      <h1 class="h2 mb-3">{{ module.heading }}</h1>
+       {% if module.subheading %}<h2 class="h4 mb-3">{{ module.subheading }}</h2>{% endif %}
+      <span class="published mb-3">{{ module.published_and_type }}</span> 
+      {% set href = module.button_link.href %}
+      {% if module.button_link.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+      {% endif %}
+      <a type="button" href="{{ href }}" class="btn btn-primary">{{ module.button_text }}</a>
+    </div>
+    
+  </div>
+  <div class="container">
+    <div class="col mt-5 pt-5 border-top border-light">
+        {{ module.richtext_field }}
+    </div>
+  </div>
+</div>

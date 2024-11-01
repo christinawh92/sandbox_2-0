@@ -1,0 +1,10 @@
+[ {
+  "id" : "80864917-ddeb-622a-c936-67385f518970",
+  "name" : "om_bloggen",
+  "display_width" : null,
+  "label" : "Om bloggen",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "<p><span>En blogg fra <span style=\"text-decoration: underline;\">Kundenavn</span></span></p>\n<p><span>Dette er en blogg med fagartikler med mange ulike temaer innen markedsføring og design.&nbsp;<br>Vi håper du vil abonnere på bloggen, og laste ned våre gratis e-bøker og sjekklister!<br><span style=\"text-decoration: underline;\">www.kundenavn.no</span></span></p>"
+} ]

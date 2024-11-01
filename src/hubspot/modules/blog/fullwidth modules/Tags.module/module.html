@@ -1,0 +1,7 @@
+<div class="tags-fullwidth">
+  <div class="container pb-5 d-flex gap-3 justify-content-center flex-wrap">
+    {% for item in module.tag_field %}
+      <a class="btn btn-outline-primary" href="{{ group.absolute_url }}/topic/{{ item.slug }}">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+</div>

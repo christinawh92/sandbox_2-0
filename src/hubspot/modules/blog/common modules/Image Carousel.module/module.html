@@ -1,0 +1,21 @@
+<div id="carouselExampleIndicators" class="image-carousel carousel slide position-relative mt-5" data-ride="carousel" data-bs-ride="carousel">  
+  <div class="carousel-inner">
+    {% for item in module.image_item %}
+    <div class="carousel-item {% if loop.first %}active{% endif %}" id="{{ loop.index }}" data-bs-interval="10000000">
+      <img class="d-block w-100 object-fit-cover" style="aspect-ratio: {{ module.aspect_ratio }};" src="{{ item.image_field.src }}" alt="Slide {{ loop.index }}">
+      <div class="carousel-caption d-block position-static text-dark">
+        <small><em>{{ item.image_text }}</em></small>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <div class="p-2 bg-primary d-flex rounded-circle"><span class="carousel-control-prev-icon" aria-hidden="true"></span></div>
+    <span class="visually-hidden">Forrige</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <div class="p-2 bg-primary d-flex rounded-circle"><span class="carousel-control-next-icon" aria-hidden="true"></span></div>
+    <span class="visually-hidden">Neste</span>
+  </button>
+</div>

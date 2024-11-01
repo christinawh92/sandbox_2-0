@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../mixins/mixins';
+
+// Header (simple) 
+
+.header-simple {
+
+    .header-logo {
+        width: 130px;
+    }
+}

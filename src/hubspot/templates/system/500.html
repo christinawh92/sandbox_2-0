@@ -1,0 +1,25 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Customer Boilerplate - 500 error
+  screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_system.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Error 500 | Serverfeil" %}
+
+{% block body %}
+<section class="content-wrapper text-center">
+  <div class="error-page container py-5" data-error="500">
+    {% module 'content'
+      path='@hubspot/rich_text',
+      html='<h1 class="pt-5">Det er noe som ikke stemmer...</h1>
+      <p><strong>Error 500</strong></p>
+      <p>Beklager, en intern serverfeil som har inntruffet. Vi er på saken!</p>
+      <a href="https://www.kundenavn.no/" class="btn btn-primary mb-5">Gå til kundenavn.no</a>
+      '
+    %}
+  </div>
+</section>
+{% endblock body %}

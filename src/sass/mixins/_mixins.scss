@@ -1,0 +1,14 @@
+@mixin input-form {
+    input[type=email],
+    input[type=file],
+    input[type=number],
+    input[type=password],
+    input[type=tel],
+    input[type=text],
+    textarea, select {
+        width: 100%; 
+        padding: 0.3em;
+        border-radius: $button-border-radius; 
+        border: $border-input-form;
+    }
+}

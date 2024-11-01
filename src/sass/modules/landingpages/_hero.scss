@@ -1,0 +1,10 @@
+.hero {
+    .container {
+        min-height: 500px; 
+        color: $white; 
+    
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            min-height: 400px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Landing Page - Thank you page
+    screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_lp.html" %}
+
+{% block body %}
+
+  {% dnd_area 'dnd_area'
+    label='Main section',
+    class=''
+  %}
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Thank you download" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  {% dnd_section %}
+
+    {% dnd_module path="/Customer Boilerplate/modules/landingpages/Cards" %}
+    {% end_dnd_module %}
+
+  {% end_dnd_section %} 
+
+  
+{% end_dnd_area %}
+
+{% endblock body %}

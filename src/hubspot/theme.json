@@ -1,0 +1,17 @@
+{
+    "label": "Christinas Sandbox",
+    "preview_path": "./templates/landingpages/landingpage.html",
+    "screenshot_path": "./images/template-previews/theme.png",
+    "enable_domain_stylesheets": false,
+    "license": "./license.txt",
+    "responsive_breakpoints": [
+      {
+        "name": "mobile",
+        "mediaQuery": "@media (max-width: 767px)",
+        "previewWidth": {
+          "value": 477
+        }
+      }
+    ]
+  }
+  

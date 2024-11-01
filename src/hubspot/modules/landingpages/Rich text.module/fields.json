@@ -1,0 +1,68 @@
+[ {
+  "id" : "aeb8adc0-6f5e-a1c6-9c9f-29c4ffefe6b3",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>This is a heading</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam turpis, mattis varius elementum ut, tempor a turpis. Nulla et interdum leo. Ut euismod consectetur velit, laoreet mollis turpis interdum quis.</p>"
+}, {
+  "id" : "d3c2993b-53e5-f6e8-4f99-4cda2840c935",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : null,
+    "opacity" : null
+  }
+}, {
+  "id" : "de43c321-59e4-3e96-e80d-d26e702dd8c5",
+  "name" : "margin_and_padding",
+  "display_width" : null,
+  "label" : "Margin and padding",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "af927e32-d4de-3ec8-7021-803017c81e6f",
+    "name" : "margin_top",
+    "display_width" : null,
+    "label" : "Margin top",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "90cc73b6-ae0f-b898-d430-f8db70086789",
+    "name" : "margin_bottom",
+    "display_width" : null,
+    "label" : "Margin bottom",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "48783b2a-137f-b488-aa93-c1105dc324b5",
+    "name" : "padding",
+    "display_width" : null,
+    "label" : "Padding",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "margin_top" : true,
+    "margin_bottom" : false,
+    "padding" : false
+  }
+} ]

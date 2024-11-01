@@ -1,0 +1,92 @@
+{
+  "header.label" : {
+    "message" : "Header",
+    "description" : "",
+    "placeholders" : null
+  },
+  "header.placeholder" : {
+    "message" : "Header Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "email_subscriptions_confirmation",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subheader_text.default" : {
+    "message" : "<span>Hvis dette ikke er din e-postadresse, vennligst ignorer denne siden, fordi e-posten som som linket hit mest sannsynlig har blitt videresendt til deg.</span>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subheader_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "subheader_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "subheader_text.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subheader_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "subscription_update_success.default" : {
+    "message" : "Du er nå avmeldt alle e-po",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subscription_update_success.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "subscription_update_success.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "subscription_update_success.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "subscription_update_success.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "unsubscribe_all_success.default" : {
+    "message" : "Meld meg av alle e-postlister. ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "unsubscribe_all_success.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "unsubscribe_all_success.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "unsubscribe_all_success.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "unsubscribe_all_success.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

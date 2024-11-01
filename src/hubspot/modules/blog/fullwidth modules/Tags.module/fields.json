@@ -1,0 +1,16 @@
+[ {
+  "id" : "915be287-93e0-dcad-642a-9492766afdad",
+  "name" : "tag_field",
+  "display_width" : null,
+  "label" : "Tag",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 2,
+    "max" : 8,
+    "sorting_label_field" : null,
+    "default" : 2
+  },
+  "tag_value" : "ALL",
+  "type" : "tag"
+} ]

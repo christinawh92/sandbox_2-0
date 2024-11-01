@@ -1,0 +1,17 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Customer Boilerplate - email backup unsubscribe
+  screenshotPath: ../../images/template-previews/template-preview.png
+-->
+
+{% extends "../layouts/base_system.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Unsubscribe" %}
+
+{% block body %}
+<section class="content-wrapper py-5">
+  <div class="systems-page container py-5 d-flex flex-column justify-content-center align-items-center">
+  {% module "module_17057858839755" path="/Customer Boilerplate/templates/system/modules/email_simple_subscription", label="email_simple_subscription" %}  </div>
+</section>
+{% endblock body %}

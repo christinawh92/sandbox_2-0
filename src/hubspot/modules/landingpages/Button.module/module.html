@@ -1,0 +1,14 @@
+<div class="button-module container">
+   <div class="d-flex {{ module.align }}">
+    {% set href = module.link_field.url.href %}
+    {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+    <a href="{{ href }}"
+      {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+      {% if module.link_field.rel %}rel="{{ module.link_field.rel }}"{% endif %}
+      >
+      <div class="btn {{ module.button_style }}">{{ module.button_text }}</div>
+    </a>
+   </div>
+</div>

@@ -1,0 +1,42 @@
+{# Need help setting up site search?
+   Start here: https://knowledge.hubspot.com/articles/kcs_article/cos-general/how-do-i-set-up-a-results-page-for-my-search-field-in-hubspot #}
+
+{% set search_page = module.results.use_custom_search_results_template is truthy and module.results.path_id ? content_by_id(module.results.path_id).absolute_url : site_settings.content_search_results_page_path %}
+
+{% unless (search_page is string_containing "//") %}
+  {% set search_page = "/" ~ search_page %}
+{% endunless %}
+
+{% set search_page = search_page|regex_replace("http:", "") %}
+
+<div class="hs-search-field search-input-collapse position-relative">
+    <div class="hs-search-field__bar">
+      <form data-hs-do-not-collect="true" action="{{ search_page }}">
+        {% if module.field_label %}
+          <label for="term">{{ module.field_label }}</label>
+        {% endif %}
+        <div class="d-flex gap-3 align-items-center position-relative">
+          <input type="text" class="hs-search-field__input position-absolute" id="searchInput" name="term" autocomplete="off" aria-label="{{ module.field_label || 'Søk' }}" placeholder="{{ module.placeholder }}" style="display: none;">
+          <img src="https://respons.markedspartner.no/hubfs/Customer%20Boilerplate/search_icon.svg" width="20px" loading="lazy" alt="Search icon" id="searchIcon">
+        </div>
+    
+      </form>
+    </div>
+    <ul class="hs-search-field__suggestions m-0 list-unstyled position-absolute"></ul>
+</div>
+
+<script>
+document.getElementById('searchIcon').addEventListener('click', function() {
+    var searchInput = document.getElementById('searchInput');
+    var searchSuggestions = document.querySelector('.hs-search-field__suggestions');
+
+    if (searchInput.style.display === "none") {
+        searchInput.style.display = "block";
+        searchSuggestions.style.display = "block";  // Show the suggestions list
+    } else {
+        searchInput.style.display = "none";
+        searchSuggestions.style.display = "none";  // Hide the suggestions list
+    }
+});
+
+</script>
